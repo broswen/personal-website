@@ -43,7 +43,7 @@ export default function Home() {
           <p className="italic">09/2016 - 06/2020</p>
           <p className="mb-4">
               <ul>
-                  <li>Graduate magna Cum Laude</li>
+                  <li>Graduated Magna Cum Laude</li>
                   <li>Minor in Japanese Studies</li>
               </ul>
           </p>
