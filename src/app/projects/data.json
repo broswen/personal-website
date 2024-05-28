@@ -1,0 +1,38 @@
+[
+  {
+    "title": "vex",
+    "description": "Remote config and feature flag service",
+    "languages": ["Go"],
+    "url": "https://github.com/broswen/vex"
+  },
+  {
+    "title": "tfstate-edge",
+    "description": "Serverless HTTP Terraform Backend on Cloudflare Workers",
+    "languages": ["TypeScript"],
+    "url": "https://github.com/broswen/tfstate-edge"
+  },
+  {
+    "title": "eztoll",
+    "description": "Serverless Toll system using API Gateway, Lambda, DynamoDB, and Rekognition",
+    "languages": ["Go"],
+    "url": "https://github.com/broswen/eztoll"
+  },
+  {
+    "title": "linkshrink",
+    "description": "A serverless link shrinker made with API Gateway, Lambda, DynamoDB, and Kinesis",
+    "languages": ["TypeScript"],
+    "url": "https://github.com/broswen/linkshrink"
+  },
+  {
+    "title": "notifi",
+    "description": "Notification system for instant and schedule notifications",
+    "languages": ["Go"],
+    "url": "https://github.com/broswen/notifi"
+  },
+  {
+    "title": "ring",
+    "description": "CRDT LWW Register cluster with gossip on Cloudflare Workers",
+    "languages": ["TypeScript"],
+    "url": "https://github.com/broswen/ring"
+  }
+]

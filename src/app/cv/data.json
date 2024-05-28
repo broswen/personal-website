@@ -1,0 +1,76 @@
+[
+  {
+    "company": "Cloudflare",
+    "title": "Systems Engineer",
+    "location": "Chicago - Remote",
+    "employmentStart": "02/2022",
+    "employmentEnd": "current",
+    "details": []
+  },
+  {
+    "company": "Securian Financial",
+    "title": "Software Engineer",
+    "location": "St. Paul, Minnesota",
+    "employmentStart": "06/2020",
+    "employmentEnd": "02/2022",
+    "details": [
+      "Designed and maintained efficient software deployments including testing and maintenance.",
+      "Designed and deployed serverless systems using Amazon Web Services.",
+      "Supported and maintained existing applications with on-call rotations."
+    ]
+  },
+  {
+    "company": "Intercomp Company",
+    "title": "Software Engineering Intern",
+    "location": "Medina, Minnesota",
+    "employmentStart": "06/2019",
+    "employmentEnd": "09/2019",
+    "details": [
+      "Developed in-house testing and data collection software for custom hardware in Python and C#.",
+      "Engaged in all steps of the software development lifecycle, including live testing with hardware."
+    ]
+  },
+  {
+    "company": "Event Technical Services",
+    "title": "Manager",
+    "location": "St. Peter, Minnesota",
+    "employmentStart": "09/2018",
+    "employmentEnd": "06/2020",
+    "details": [
+      "Assisted and trained employees in technical support roles",
+      "Oversaw facility event functions during night and weekend shifts."
+    ]
+  },
+  {
+    "company": "Waconda Concepts",
+    "title": "Application Developer",
+    "location": "Willmar, Minnesota",
+    "employmentStart": "06/2017",
+    "employmentEnd": "09/2018",
+    "details": [
+      "Developed Android applications in Kotlin for filtering and sorting information.",
+      "Created Android application application for data collection real-time with RTK GPS hardware."
+    ]
+  },
+  {
+    "company": "Event Technical Services",
+    "title": "Employee",
+    "location": "St. Peter, Minnesota",
+    "employmentStart": "09/2016",
+    "employmentEnd": "06/2018",
+    "details": [
+      "Developed Android applications in Kotlin for filtering and sorting information.",
+      "Created Android application application for data collection real-time with RTK GPS hardware."
+    ]
+  },
+  {
+    "company": "Famous Davis",
+    "title": "Web Administrator",
+    "location": "Willmar, Minnesota",
+    "employmentStart": "06/2013",
+    "employmentEnd": "09/2013",
+    "details": [
+      "Managed client websites and updated page content using Wordpress CMS."
+    ]
+  }
+]
