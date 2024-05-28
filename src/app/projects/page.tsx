@@ -26,9 +26,9 @@ export default function Home() {
               data.map((repo) => {
                   return (
                       <div key={repo.title} className="p-4 mb-4 border-2 border-gray-200 hover:bg-gray-300 hover:border-gray-400">
-                          <Link className="underline font-bold" href={repo.url}><h3>{repo.title}</h3></Link>
+                          <Link className="underline font-bold decoration-dotted hover:decoration-solid" href={repo.url}><h3>{repo.title}</h3></Link>
                           <p>{repo.description}</p>
-                          <p className="text-sm">
+                          <p className="text-xs">
                               {
                                   repo.languages.join(", ")
                               }
