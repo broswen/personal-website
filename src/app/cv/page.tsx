@@ -35,6 +35,7 @@ export default function Home() {
                   </div>
               })
           }
+          <hr className="pb-4"/>
 
           <h1 className="text-2xl font-bold mb-4">Education</h1>
           <h2 className="text-xl font-bold">Bachelor of Arts: Computer Science</h2>
@@ -46,6 +47,7 @@ export default function Home() {
                   <li>Minor in Japanese Studies</li>
               </ul>
           </p>
+          <hr className="pb-4"/>
 
           <h1 className="text-2xl font-bold mb-4">Certifications</h1>
           <p className="mb-4">
