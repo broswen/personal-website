@@ -3,15 +3,14 @@ import Link from "next/link";
 import type {Metadata} from "next";
 import {useMemo} from "react";
 import { getRequestContext } from "@cloudflare/next-on-pages";
+import {ApolloClient, gql, InMemoryCache} from "@apollo/client";
 
 export const runtime = "edge";
 
 interface pinnedItemsResponse {
-    data: {
-        user: {
-            pinnedItems: {
-                nodes: Repository[]
-            }
+    user: {
+        pinnedItems: {
+            nodes: Repository[]
         }
     }
 }
@@ -49,35 +48,42 @@ const pinnedReposQuery = {
 				}
 			}
 		}
-	}}`
+	}
+}`
 };
-
-// just do a raw graphql query since we don't need anything fancy
-async function getRepos(token: string): Promise<Repository[]> {
-    let res = await fetch("https://api.github.com/graphql", {
-        method: "POST",
-        headers: {
-            "Authorization": `Bearer ${token}`,
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(pinnedReposQuery)
-    });
-    if (!res.ok) {
-        console.log(res.status, res.statusText)
-        return [];
-    }
-    try {
-        let data = await res.json<pinnedItemsResponse>();
-        return data.data.user.pinnedItems.nodes;
-    } catch (e) {
-        return [];
-    }
-}
 
 export default async function Home() {
     // load from local .env via node env vars for local testing, in production it will be undefined and use the worker context binding
     const token = process.env.GITHUB_API_TOKEN ?? getRequestContext().env.GITHUB_API_TOKEN;
-    const repos = await useMemo(() => getRepos(token), []);
+    const client = new ApolloClient({
+        uri: "https://api.github.com/graphql",
+        cache: new InMemoryCache(),
+        headers: {
+            Authorization: `Bearer ${token}`,
+        }
+    });
+    let res = await client.query<pinnedItemsResponse>({
+        query: gql`
+	    query {
+	        user(login: "broswen") {
+	        	pinnedItems(first: 10, types: [REPOSITORY]) {
+	        		nodes {
+	        			... on Repository {
+	        				name
+	        				description
+	        				url
+	        			    stargazerCount	
+	        				languages(first: 3) {
+	        					nodes {
+	        						name
+	        					}
+	        				}
+	        			}
+	        		}
+	        	}
+	        }
+	    }`
+    });
     return (
         <main className="">
             <h1 className="text-2xl font-bold mb-4">Projects</h1>
@@ -87,7 +93,10 @@ export default async function Home() {
             <h2 className="text-xl mb-4">Pinned Projects</h2>
             <div className="flex-col">
                 {
-                    repos.map((repo) => {
+                    res.error && <p>Error loading projects.</p>
+                }
+                {
+                    res.data && res.data.user.pinnedItems.nodes.map((repo) => {
                         return (
                             <div key={repo.name}
                                  className="p-4 mb-4 border-2 border-gray-200 hover:bg-gray-300 hover:border-gray-400">
