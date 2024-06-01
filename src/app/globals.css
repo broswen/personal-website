@@ -18,3 +18,13 @@
 
 body {
 }
+
+a {
+  text-decoration: dotted;
+  text-decoration-line: underline;
+}
+
+a:hover {
+  text-decoration: solid;
+  text-decoration-line: underline;
+}

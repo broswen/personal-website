@@ -37,16 +37,16 @@ export default function RootLayout({
         <nav className="mb-8 lg:mb-8">
           <ul className="flex flex-row justify-evenly lg:flex-col lg:gap-1">
             <li>
-              <Link className={"underline decoration-dotted hover:decoration-solid"} href="/">About Me</Link>
+              <Link href="/">About Me</Link>
             </li>
             <li>
-              <Link className="underline decoration-dotted hover:decoration-solid" href="/cv">CV</Link>
+              <Link href="/cv">CV</Link>
             </li>
             <li>
-              <Link className="underline decoration-dotted hover:decoration-solid" href="/projects">Projects</Link>
+              <Link href="/projects">Projects</Link>
             </li>
             <li>
-              <Link className="underline decoration-dotted hover:decoration-solid" href="/contact">Contact</Link>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
         </nav>

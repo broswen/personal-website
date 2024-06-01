@@ -85,10 +85,9 @@ export default async function Home() {
 	    }`
     });
     return (
-        <main className="">
+        <main>
             <h1 className="text-2xl font-bold mb-4">Projects</h1>
-            <p className="mb-4">All of my projects are hosted on <Link
-                className="underline decoration-dotted hover:decoration-solid" href="https://github.com/broswen">my
+            <p className="mb-4">All of my projects are hosted on <Link href="https://github.com/broswen">my
                 GitHub page</Link>.</p>
             <h2 className="text-xl mb-4">Pinned Projects</h2>
             <div className="flex-col">
