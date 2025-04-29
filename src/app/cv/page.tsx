@@ -53,7 +53,8 @@ export default function Home() {
           <p className="mb-4">
               <ul>
                   <li>AWS Certified Developer - Associate (DVA)</li>
-                  <li>HashiCorp Certified: Terraform Associate</li>
+                  <li>HashiCorp Certified: Terraform Associate (002)</li>
+                  <li>HashiCorp Certified: Vault Associate (003)</li>
               </ul>
           </p>
       </main>
