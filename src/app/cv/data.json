@@ -4,8 +4,12 @@
     "title": "Systems Engineer",
     "location": "Chicago - Remote",
     "employmentStart": "02/2022",
-    "employmentEnd": "current",
-    "details": []
+    "employmentEnd": "12/2025",
+    "details": [
+"Built backend applications with TypeScript, Go, and PostgreSQL, integrating with Prometheus and Kafka.",
+"Managed Kubernetes deployments and designed applications for high availability with disaster recovery capabilities.",
+"Designed and maintained distributed systems running on bare metal edge servers, handling requests around the world."
+]
   },
   {
     "company": "Securian Financial",
