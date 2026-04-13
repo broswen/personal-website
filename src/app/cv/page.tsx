@@ -7,8 +7,9 @@ interface Job {
     title: string
     location: string
     employmentStart: string
-    employmentEnd: string
+    employmentEnd?: string
     details: string[]
+    tags?: string[]
 }
 
 export const metadata: Metadata = {
@@ -24,14 +25,19 @@ export default function Home() {
                   return <div key={i}>
                       <h2 className="text-xl font-bold">{job.title}</h2>
                       <h3 className="text-lg">{job.company}</h3>
-                      <p className="italic">{job.employmentStart} - {job.employmentEnd}</p>
-                      <p className="mb-4">
+                      <p className="italic">{job.employmentStart} - {job.employmentEnd ?? "Present"}</p>
+                      <p className="mb-2">
                           <ul>
                               {
                                   job.details.map(detail => <li key={detail}>{detail}</li>)
                               }
                           </ul>
                       </p>
+                      {job.tags && job.tags.length > 0 && (
+                          <p className="mb-4">
+                              {job.tags.map(tag => <span key={tag} className="inline-block bg-gray-200 rounded px-2 py-0.5 text-sm mr-1">{tag}</span>)}
+                          </p>
+                      )}
                   </div>
               })
           }

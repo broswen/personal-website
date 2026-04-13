@@ -1,5 +1,15 @@
 [
   {
+    "company": "GitHub",
+    "title": "Software Engineer",
+    "location": "Remote",
+    "employmentStart": "12/2025",
+    "details": [
+      "Git Systems - Git data access and storage systems"
+    ],
+    "tags": ["Go", "Git", "Kubernetes", "MySQL", "Ruby"]
+  },
+  {
     "company": "Cloudflare",
     "title": "Systems Engineer",
     "location": "Chicago - Remote",
